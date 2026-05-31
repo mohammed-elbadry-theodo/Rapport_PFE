@@ -1,0 +1,20 @@
+\chapter*{Résumé}
+\addcontentsline{toc}{section}{\textbf{Résumé}}
+
+\vspace{0.5cm}
+
+Les applications mobiles développées par des cabinets de conseil tels que \textbf{Theodo} doivent respecter les règles de publication de l'\textbf{Apple App Store et de Google Play.} En pratique, la non-conformité n'est souvent détectée qu'à la toute fin du cycle de développement, au moment de la soumission de l'application sur les stores. Un rejet tardif entraîne alors, à grands frais, des \textbf{reprises et des retards de livraison} pour les applications déjà en production. Ce travail, réalisé dans le cadre du projet \textbf{Mobile Software Factory}, répond à cette problématique en déplaçant la vérification de conformité « vers la gauche », c'est-à-dire plus tôt et de manière continue tout au long du développement.
+
+\vspace{0.3cm}
+
+La solution proposée est un \textbf{outil d'audit de conformité automatisé}, livré sous la forme d'une \textit{skill} structurée et exécutée par un agent de programmation basé sur l'intelligence artificielle. Plutôt qu'un analyseur statique classique, il s'appuie sur des paquets de règles auditables que l'agent applique par raisonnement, en suivant un processus en cinq étapes : détection du framework, compréhension du code orientée revue, sélection du domaine métier, application des règles pertinentes et génération du rapport. L'approche est volontairement ciblée, n'évaluant que les directives pertinentes pour les fonctionnalités réellement utilisées par l'application, et fondée sur des preuves, de sorte que chaque constat est rattaché à la fois à un comportement observé dans le code et à une règle écrite.
+
+\vspace{0.3cm}
+
+Comme l'outil est piloté par un modèle de langage, sa sortie ne peut être validée par des tests unitaires classiques. Une suite d'évaluation comportementale a donc été construite avec \textbf{Promptfoo}, combinant des projets de test minimaux, des scénarios appariés conformes / non conformes, \textbf{des assertions déterministes et des jugements basés sur des grilles d'évaluation} afin de garantir que l'audit identifie les bons problèmes, cite les bonnes preuves et évite les constats hallucinés.
+
+\vspace{0.8cm}
+
+\noindent\textbf{Mots-clés :} Conformité aux stores, Applications mobiles, App Store, Google Play, Shift-left, Agent IA, LLM, Skill, Permissions, Promptfoo, Preuve de concept.
+
+\clearpage

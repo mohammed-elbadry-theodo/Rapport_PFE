@@ -52,6 +52,41 @@
 {\normalfont\huge\bfseries}{\chaptername\ \thechapter}{20pt}{\Huge}
 \titlespacing*{\chapter}{0pt}{-20pt}{40pt}
 
+% Custom chapter opening page with quote
+\newcommand{\mychapter}[2]{%
+	\clearpage
+	\refstepcounter{chapter}%
+	\addcontentsline{toc}{chapter}{\Roman{chapter}. #1}%
+	\markboth{#1}{#1}%
+	\thispagestyle{plain}%
+	\vspace*{0.2\textheight}
+	\begin{center}
+		\begin{minipage}{0.9\textwidth}
+			\centering
+			{\large\bfseries CHAPTER \Roman{chapter}\par}
+			\vspace{0.5cm}
+			{\Huge\bfseries #1\par}
+			\vspace{1.5cm}
+			{\linespread{1.6}\selectfont\Large\itshape #2\par}
+		\end{minipage}
+	\end{center}
+	\vspace*{\fill}
+	\clearpage
+	\pagestyle{fancy}%
+}
+
+% Round (circular) cropped picture, uniform size, for team photos
+\newcommand{\roundpic}[1]{%
+	\begin{tikzpicture}[baseline=(c.base)]
+		\node[circle, minimum size=2.8cm, inner sep=0pt] (c) {};
+		\begin{scope}
+			\clip (c.center) circle (1.4cm);
+			\node at (c.center) {\includegraphics[width=2.8cm,height=2.8cm]{#1}};
+		\end{scope}
+		\draw[line width=1pt, gray!60] (c.center) circle (1.4cm);
+	\end{tikzpicture}%
+}
+
 % French language customizations for appendices
 \addto\captionsfrench{%
 	\renewcommand\appendixname{Annexe}
@@ -65,6 +100,7 @@
 \fancyhead[L]{\leftmark} % Chapter title in the left header
 \fancyfoot[C]{\thepage} % Page number in the right header
 \renewcommand{\headrulewidth}{0.4pt} % Line thickness for the header
+\setlength{\headheight}{14.5pt}
 
 %-------------------- Document Start ---------------------%
 \begin{document}
@@ -81,12 +117,24 @@
 	
 	% Preliminary pages with Roman numerals
 
-	\pagenumbering{gobble}	% Remove the entire counter 
-	
-	% Acknowledgments
+	\pagenumbering{gobble}	% Remove the entire counter
+
+	% Dedication
+	\include{pages/00a-dedicace}
+	\thispagestyle{plain}
+
+	% Acknowledgment
 	\include{pages/01-Remerciements}
 	\thispagestyle{plain}
-	
+
+	% Abstract
+	\include{pages/01b-abstract}
+	\thispagestyle{plain}
+
+	% Résumé
+	\include{pages/01c-resume}
+	\thispagestyle{plain}
+
 	% Table of Contents
 	\tableofcontents
 	\clearpage
@@ -102,9 +150,9 @@
 	% Include main content chapters
 	\include{pages/02-into-gene}
 	\include{pages/05-presentation-entreprise}
-	% \include{pages/06-stage}
+	\include{pages/06-stage}
 	% \include{pages/07-chapitre-realisation}
-	\include{pages/07-Realisation}
+	% \include{pages/07-Realisation}
 	% \include{pages/08-conclusion-perspectives}
 	% \include{pages/09-annexes}
 	

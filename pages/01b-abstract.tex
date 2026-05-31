@@ -1,0 +1,20 @@
+\chapter*{Abstract}
+\addcontentsline{toc}{section}{\textbf{Abstract}}
+
+\vspace{0.5cm}
+
+Mobile applications built by software consultancies such as \textbf{Theodo} must comply with the publication rules of the \textbf{Apple App Store and Google Play.} In practice, non-compliance is often discovered only at the very end of the development cycle, when the application is submitted to the stores. A late rejection then causes costly \textbf{rework and delivery delays} for applications already in production. This work, carried out as part of the \textbf{Mobile Software Factory} project, addresses this problem by shifting compliance verification to the left, that is, earlier and continuously throughout development.
+
+\vspace{0.3cm}
+
+The proposed solution is an \textbf{automated compliance audit tool}, delivered as a structured \textit{skill} executed by an AI coding agent. Rather than a classic static analyzer, it relies on auditable policy packs that the agent applies through reasoning, following a five-step workflow: framework detection, review-oriented codebase understanding, business-domain selection, application of the relevant policies, and report generation. The approach is deliberately scope-aware, evaluating only the guidelines relevant to the features the application actually uses, and evidence-based, so that every finding is traced both to an observed code path and to a written policy rule.
+
+\vspace{0.3cm}
+
+Because the tool is driven by a language model, its output cannot be validated with classical unit tests. A behavioral evaluation suite was therefore built with \textbf{Promptfoo}, combining minimal fixture projects, paired compliant/non-compliant scenarios, \textbf{deterministic assertions, and rubric-based judgments} to guarantee that the audit identifies the right issues, cites the right evidence, and avoids hallucinated findings.
+
+\vspace{0.8cm}
+
+\noindent\textbf{Keywords:} Store compliance, Mobile applications, App Store, Google Play, Shift-left, AI agent, LLM, Skill, Permissions, Promptfoo, Proof of concept.
+
+\clearpage

@@ -1,19 +1,38 @@
-\chapter*{\Huge Introduction Générale}
-\addcontentsline{toc}{section}{\textbf{Introduction}}
+\chapter*{\Huge General Introduction}
+\addcontentsline{toc}{section}{\textbf{General Introduction}}
 
-As the culmination of my pursuit of a state diploma in Software Engineering, Big Data, and Cloud Computing, I undertook an end-of-study internship at \textbf{Theodo}, a digital consultancy firm known for delivering high-impact software solutions. The internship was conducted in partnership with a major companies build web and mobile applicatio...\\
+As the culmination of my pursuit of a state engineering diploma in Software Engineering, Big Data, and Cloud Computing, I undertook an end-of-study internship at \textbf{Theodo Morocco}, a digital consultancy firm recognized for delivering high-impact web and mobile software solutions for its clients. This internship offered the opportunity to confront a concrete industrial problem and to design, build, and evaluate a complete solution within a professional engineering environment.
 
-//Problem Statement 
+\vspace{0.3cm}
 
-//Project context
+A consultancy such as Theodo regularly builds mobile applications that must eventually be published on the Apple App Store and Google Play. Each store enforces a detailed set of review guidelines and developer policies, and any violation can lead to the rejection of an application. The recurring difficulty is that this verification happens too late: teams develop an application over several weeks or months, and the non-compliance is only discovered at submission time, at the worst possible moment, right before delivery. This \textit{late detection} causes costly rework and delays, while applications already in production accumulate a growing \textit{compliance debt} as store requirements evolve. The core insight behind this project is that compliance should be verified continuously, as the application is being built, rather than as a one-shot gate at the very end.
 
-This report is structured into four chapters to provide a clear overview of my contributions:\\
+\vspace{0.3cm}
 
-Chapter I - Host Organization \& Project Context establishes the comprehensive foundation by introducing Theodo Morocco and its evolution within the international Theodo Group, while presenting the complex challenges of the National Sports Federation's digital infrastructure. This chapter examines the company's core values, hiring processes, federation structure, stakeholder diversity, and the critical limitations of the legacy FDME system that necessitated complete modernization.\\\\
+This work was carried out within the \textbf{Mobile Software Factory} project, a collaborative initiative at Theodo aimed at improving the reliability and the speed of mobile application delivery. The project brought together a cross-functional team composed of developers, a tech lead, and a project manager. My contribution focused on the store-compliance component, materialized as an automated audit tool that a developer can run as a command during development to obtain a clear and actionable compliance status of the application.
 
-Chapter II - Methodology \& Development Approach describes the structured development methodology and collaborative framework that guided the project's success. This chapter details the Lean-Agile hybrid approach, risk-driven planning, cross-functional team organization, and comprehensive toolchain integration that enabled effective coordination between technical development and federation stakeholders.\\\\
+\vspace{0.3cm}
 
-Chapter III - .....\\\\
+The solution is designed as a structured \textit{skill} executed by an AI coding agent. It inspects the source code and configuration of a cross-platform mobile application, applies a set of auditable policy rules, and produces a report describing what was checked, what passes, what fails, and how each issue should be remediated. The approach is deliberately scope-aware, evaluating only the guidelines relevant to the features the application actually uses, and evidence-based, so that each finding is justified by an observed behavior and a written rule rather than by guesswork. Particular attention was given to the quality assurance strategy, since a tool driven by a language model cannot be validated through classical unit testing and required a dedicated behavioral evaluation methodology.
 
-Chapter IV - ....\\\\
+\vspace{0.5cm}
+
+This report is structured into several chapters to provide a clear and progressive overview of my contributions:
+
+\vspace{0.3cm}
+
+\noindent\textbf{Chapter I -- Host Organization \& Project Context} introduces Theodo Morocco and its place within the international Theodo Group, the work culture that framed the internship, the project team, and the overall mission. It situates the internship in its professional environment before any technical detail is discussed.
+
+\vspace{0.2cm}
+
+\noindent\textbf{Chapter II -- } 
+
+\vspace{0.2cm}
+
+\noindent\textbf{Chapter III -- } 
+
+\vspace{0.2cm}
+
+\noindent\textbf{Chapter IV -- }
+
 \vspace{1cm}
